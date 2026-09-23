@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RuangBelajar — Learning Platform</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="navbar-shell">
+<div class="container navbar">
+    <a class="brand" href="index.html">
+        <span class="brand-mark">R</span>
+        <span>RuangBelajar<small>Learning Platform</small></span>
+    </a>
+    <nav class="nav-links">
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <a href="#classes" data-i18n="nav_classes">Kelas</a>
+        <a href="resources.html" data-i18n="nav_resources">Resources</a>
+        <a href="login.html" data-i18n="nav_login">Masuk</a>
+        <a href="register.html" class="btn btn-primary btn-small" data-i18n="nav_register">Daftar</a>
+    </nav>
+    <div class="nav-actions">
+        <button class="lang-toggle" data-lang-toggle>EN</button>
+        <button class="mobile-toggle" aria-label="Buka menu">☰</button>
+    </div>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="container hero-grid">
+    <div>
+        <span class="eyebrow" data-i18n="hero_badge">Learning Platform</span>
+        <h1 data-i18n="hero_title">Belajar bertumbuh, satu langkah yang berarti setiap hari.</h1>
+        <p data-i18n="hero_desc">Ruang belajar yang membantu murid dan guru menjalani proses belajar secara terstruktur, manusiawi, dan terukur.</p>
+        <div class="hero-actions">
+            <a href="#classes" class="btn btn-primary" data-i18n="cta_start">Mulai Perjalananmu</a>
+            <a href="resources.html" class="btn btn-secondary" data-i18n="cta_free">Lihat Free Resources</a>
+        </div>
+    </div>
+    <div class="hero-panel">
+        <div class="hero-panel-top">
+            <strong>Progress Belajarmu</strong>
+            <span class="status-pill">● Aktif</span>
+        </div>
+        <div class="progress-card">
+            <div class="progress-meta"><span>Kelas A</span><strong>23%</strong></div>
+            <div class="progress-track"><div class="progress-fill" style="width:23%"></div></div>
+            <p style="margin:12px 0 0;color:var(--muted);font-size:.82rem">Modul 1 · Pelajaran 7 dari 10</p>
+        </div>
+        <div class="mini-stats">
+            <div class="mini-stat"><strong>30</strong><span>Total pelajaran</span></div>
+            <div class="mini-stat"><strong>3</strong><span>Modul</span></div>
+            <div class="mini-stat"><strong>1:1</strong><span>Pendampingan</span></div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="section" id="classes">
+<div class="container">
+    <div class="section-head">
+        <div>
+            <h2 data-i18n="classes_title">Pilih kelas yang sesuai dengan perjalananmu</h2>
+            <p data-i18n="classes_desc">Tiga jalur belajar dengan struktur modul yang jelas dan pendampingan guru.</p>
+        </div>
+    </div>
+
+    <div class="card-grid-3">
+        <article class="class-card">
+            <div class="class-icon">A</div>
+            <h3>Kelas A</h3>
+            <p>Fondasi dasar untuk membangun pemahaman, kebiasaan belajar, dan rasa percaya diri.</p>
+            <div class="card-footer"><span class="tag">3 modul · 30 pelajaran</span><a href="class-a.html" class="btn btn-secondary btn-small">Masuk kelas</a></div>
+        </article>
+        <article class="class-card">
+            <div class="class-icon">B</div>
+            <h3>Kelas B</h3>
+            <p>Pembelajaran lanjutan dengan latihan yang lebih terarah dan refleksi berkala.</p>
+            <div class="card-footer"><span class="tag">3 modul · 30 pelajaran</span><a href="class-b.html" class="btn btn-secondary btn-small">Masuk kelas</a></div>
+        </article>
+        <article class="class-card">
+            <div class="class-icon">C</div>
+            <h3>Kelas C</h3>
+            <p>Pendalaman materi dan penerapan untuk membantu murid bergerak lebih mandiri.</p>
+            <div class="card-footer"><span class="tag">3 modul · 30 pelajaran</span><a href="class-c.html" class="btn btn-secondary btn-small">Masuk kelas</a></div>
+        </article>
+    </div>
+</div>
+</section>
+
+<section class="section-sm">
+<div class="container">
+    <div class="section-head">
+        <div>
+            <h2 data-i18n="free_title">Belajar juga bisa dimulai secara gratis</h2>
+            <p data-i18n="free_desc">Jelajahi e-book, video, dan gambar pilihan tanpa harus login.</p>
+        </div>
+        <a href="resources.html" class="btn btn-ghost" data-i18n="see_more">Lihat semua resources</a>
+    </div>
+    <div class="card-grid-3">
+        <article class="resource-card">
+            <div class="resource-thumb">VIDEO</div>
+            <div class="resource-body"><span class="resource-type">Video</span><h3>Cara membangun kebiasaan belajar</h3><p>8 menit · Gratis</p></div>
+        </article>
+        <article class="resource-card">
+            <div class="resource-thumb">E-BOOK</div>
+            <div class="resource-body"><span class="resource-type">E-book</span><h3>Panduan belajar mandiri</h3><p>PDF · Gratis</p></div>
+        </article>
+        <article class="resource-card">
+            <div class="resource-thumb">IMAGE</div>
+            <div class="resource-body"><span class="resource-type">Gambar</span><h3>Infografik: strategi mengingat</h3><p>PNG · Gratis</p></div>
+        </article>
+    </div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container footer-inner">
+    <span>© 2026 RuangBelajar</span>
+    <span>Belajar. Bertumbuh. Berbagi.</span>
+</div>
+</footer>
+
+<button class="chat-fab" aria-label="Buka chat">💬<span class="chat-badge">1</span></button>
+<div class="chat-panel hidden">
+    <div class="chat-head"><strong>Chat Guru</strong><button class="close-btn chat-close">×</button></div>
+    <div class="chat-body"></div>
+    <form class="chat-input" id="chatForm"><input placeholder="Tulis pesan..."><button>➤</button></form>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kelas B — RuangBelajar</title><link rel="stylesheet" href="assets/style.css"></head>
+<body>
+<header class="navbar-shell"><div class="container navbar">
+<a class="brand" href="index.html"><span class="brand-mark">R</span><span>RuangBelajar<small>Learning Platform</small></span></a>
+<nav class="nav-links"><a href="index.html">Home</a><a href="profile-student.html">Profile Murid</a><a href="profile-teacher.html">Profile Guru</a><a href="resources.html">Resources</a></nav>
+<div class="nav-actions"><button class="lang-toggle" data-lang-toggle>EN</button><button class="mobile-toggle">☰</button></div>
+</div></header>
+
+<main class="section-sm" data-class-page data-class-name="Kelas B">
+<div class="container">
+<div class="class-header">
+<div><span class="eyebrow">Learning Path</span><h1 id="classTitle">Kelas B</h1><p>3 modul · 30 pelajaran · tugas per pelajaran · review guru</p></div>
+<div class="role-switch"><button class="active" data-role="student">Tampilan Murid</button><button data-role="teacher">Tampilan Guru</button></div>
+</div>
+
+<div class="block-card" style="margin-bottom:20px">
+<div class="progress-meta"><span>Progress Kelas B</span><strong data-progress-value>0%</strong></div>
+<div class="progress-track"><div class="progress-fill" data-progress-bar style="width:0%"></div></div>
+<p class="field-help" style="margin-top:10px">Pelajaran berikutnya hanya terbuka setelah tugas sebelumnya diluluskan guru.</p>
+</div>
+
+<div class="class-layout">
+<aside id="moduleList"></aside>
+
+<section class="main-panel" style="padding:22px">
+<div id="studentOnly">
+<div class="lesson-main"><h2 id="lessonTitle">Pelajaran 1</h2><div id="lessonBody"></div></div>
+</div>
+<div id="teacherGuide" class="teacher-guide hidden">
+<h3>Panduan Guru</h3>
+<p>Gunakan bagian ini untuk mengingat kembali tujuan pembelajaran, konsep inti, contoh pengajaran, dan kesalahan umum sebelum mendampingi murid.</p>
+<ul><li>Tujuan pembelajaran</li><li>Poin penting materi</li><li>Contoh penjelasan sederhana</li><li>Catatan untuk memberi feedback</li></ul>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px"><button id="demoApprove" class="btn btn-primary btn-small">Simulasikan: Luluskan</button><button id="demoRevise" class="btn btn-warning btn-small">Simulasikan: Minta Perbaikan</button></div>
+</div>
+</section>
+</div>
+
+<div class="section-block">
+<div class="notice">Catatan prototype: fitur penguncian, review guru, progress, dan status jawaban sekarang disimulasikan dengan localStorage. Pada versi produksi, semua status harus berasal dari database dan diverifikasi server.</div>
+</div>
+</div>
+</main>
+
+<button class="chat-fab">💬<span class="chat-badge">1</span></button>
+<div class="chat-panel hidden"><div class="chat-head"><strong>Chat</strong><button class="close-btn chat-close">×</button></div><div class="chat-body"></div><form class="chat-input" id="chatForm"><input placeholder="Tulis pesan..."><button>➤</button></form></div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

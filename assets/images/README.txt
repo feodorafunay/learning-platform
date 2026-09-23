@@ -1,0 +1,1 @@
+Tempatkan thumbnail resource, screenshot kelas, avatar, e-book cover, dan asset visual lainnya di folder ini.

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Profile Guru — RuangBelajar</title><link rel="stylesheet" href="assets/style.css"></head>
+<body>
+<header class="navbar-shell"><div class="container navbar">
+<a class="brand" href="index.html"><span class="brand-mark">R</span><span>RuangBelajar<small>Learning Platform</small></span></a>
+<nav class="nav-links"><a href="index.html">Home</a><a href="class-a.html">Kelas A</a><a href="class-b.html">Kelas B</a><a href="class-c.html">Kelas C</a><a href="resources.html">Resources</a></nav>
+<div class="nav-actions"><button class="lang-toggle" data-lang-toggle>EN</button><button class="mobile-toggle">☰</button></div>
+</div></header>
+
+<main class="section-sm"><div class="container dashboard-shell">
+<aside class="sidebar"><div class="sidebar-title">Menu Guru</div><a class="side-link active" href="profile-teacher.html">Profile</a><a class="side-link" href="class-a.html">Kelas A</a><a class="side-link" href="class-b.html">Kelas B</a><a class="side-link" href="class-c.html">Kelas C</a><a class="side-link" href="resources.html">Resources</a></aside>
+<section class="main-panel">
+<div class="profile-header">
+<div class="avatar">MA</div>
+<div class="profile-title"><h1>Maria Ananda</h1><p>Guru · Pendamping belajar</p></div>
+<div class="header-actions"><span class="status-pill">Guru aktif</span></div>
+</div>
+
+<div class="stats-row">
+<div class="kpi"><strong>12</strong><span>Total murid</span></div>
+<div class="kpi"><strong data-referral-code>KLM582</strong><span>Kode referral</span></div>
+<div class="kpi"><strong>27</strong><span>Review selesai</span></div>
+<div class="kpi"><strong>4</strong><span>Review menunggu</span></div>
+</div>
+
+<div class="section-block">
+<h2>Kode referral</h2>
+<div class="block-card" style="display:flex;justify-content:space-between;gap:18px;align-items:center">
+<div><div class="field-help">Bagikan kode ini ke calon murid</div><strong style="font-size:1.7rem;letter-spacing:.08em" data-referral-code>KLM582</strong></div>
+<button class="btn btn-secondary btn-small" onclick="navigator.clipboard?.writeText(document.querySelector('[data-referral-code]').textContent); toast('Kode referral disalin.')">Salin kode</button>
+</div>
+</div>
+
+<div class="section-block">
+<h2>Daftar murid</h2>
+<div class="table-wrap">
+<table class="table"><thead><tr><th>Murid</th><th>Kelas</th><th>Progress</th><th>Status</th><th>Jawaban</th></tr></thead>
+<tbody>
+<tr><td><strong>Felicia S.</strong></td><td>Kelas A</td><td><div class="progress-inline"><div class="progress-track"><div class="progress-fill" style="width:23%"></div></div><span>23%</span></div></td><td><span class="tag">Aktif</span></td><td><button class="btn btn-warning btn-small" onclick="openReview('Felicia S.')">1 jawaban baru</button></td></tr>
+<tr><td><strong>Andi P.</strong></td><td>Kelas B</td><td><div class="progress-inline"><div class="progress-track"><div class="progress-fill" style="width:47%"></div></div><span>47%</span></div></td><td><span class="tag">Aktif</span></td><td><button class="btn btn-secondary btn-small" onclick="openReview('Andi P.')">Lihat</button></td></tr>
+<tr><td><strong>Nadia R.</strong></td><td>Kelas C</td><td><div class="progress-inline"><div class="progress-track"><div class="progress-fill" style="width:71%"></div></div><span>71%</span></div></td><td><span class="tag">Aktif</span></td><td><button class="btn btn-secondary btn-small" onclick="openReview('Nadia R.')">Lihat</button></td></tr>
+</tbody></table>
+</div>
+</div>
+
+<div class="section-block">
+<h2>Permintaan menjadi guru</h2>
+<div id="teacherRequestCard">
+<div class="notice warning">Ada permintaan dari 1 murid yang ingin menjadi guru.</div>
+<div style="display:flex;gap:10px;margin-top:10px">
+<button id="approveTeacherBtn" class="btn btn-primary btn-small">Setujui</button>
+<button id="rejectTeacherBtn" class="btn btn-secondary btn-small">Tolak</button>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+
+<div class="modal-backdrop" id="reviewModal">
+<div class="modal">
+<div class="modal-head"><div><h2 id="reviewTitle">Review jawaban</h2><div class="field-help">Kamu dapat menandai bagian yang benar, salah, dan memberi arahan perbaikan.</div></div><button class="close-btn" onclick="closeReview()">×</button></div>
+<div class="block-card" style="margin-bottom:12px"><strong>Jawaban murid</strong><p style="color:var(--muted)">"Saya memahami bahwa tujuan utama materi ini adalah membangun kebiasaan yang konsisten. Saya masih bingung bagaimana menerapkannya ketika jadwal belajar berubah."</p></div>
+<div class="form-grid">
+<div class="form-group full"><label>Yang sudah benar</label><textarea placeholder="Contoh: inti konsep sudah tepat..."></textarea></div>
+<div class="form-group full"><label>Yang perlu diperbaiki</label><textarea placeholder="Contoh: jelaskan lagi bagian..."></textarea></div>
+</div>
+<div class="card-footer"><button class="btn btn-warning" onclick="reviewAction('revise')">Minta murid perbaiki</button><button class="btn btn-primary" onclick="reviewAction('pass')">Luluskan murid</button></div>
+</div></div>
+
+<button class="chat-fab">💬<span class="chat-badge">2</span></button>
+<div class="chat-panel hidden"><div class="chat-head"><strong>Chat dengan murid</strong><button class="close-btn chat-close">×</button></div><div class="chat-body"></div><form class="chat-input" id="chatForm"><input placeholder="Pilih murid atau tulis pesan..."><button>➤</button></form></div>
+
+<script src="assets/app.js"></script>
+<script>
+function openReview(name){
+    document.getElementById("reviewTitle").textContent="Review jawaban — "+name;
+    document.getElementById("reviewModal").classList.add("open");
+}
+function closeReview(){document.getElementById("reviewModal").classList.remove("open")}
+function reviewAction(action){
+    closeReview();
+    toast(action==="pass"?"Murid berhasil diluluskan. Progress akan diperbarui.":"Murid diminta memperbaiki jawaban.");
+}
+</script>
+</body>
+</html>
