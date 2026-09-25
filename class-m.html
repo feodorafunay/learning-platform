@@ -1,22 +1,22 @@
 <!doctype html>
 <html lang="id">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kelas C — RuangBelajar</title><link rel="stylesheet" href="assets/style.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kelas M — RuangBelajar</title><meta name="theme-color" content="#2f6f66"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232f6f66'/%3E%3Ctext x='32' y='45' font-size='38' font-family='sans-serif' font-weight='800' text-anchor='middle' fill='white'%3ER%3C/text%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"><link rel="stylesheet" href="assets/style.css"></head>
 <body>
 <header class="navbar-shell"><div class="container navbar">
 <a class="brand" href="index.html"><span class="brand-mark">R</span><span>RuangBelajar<small>Learning Platform</small></span></a>
-<nav class="nav-links"><a href="index.html">Home</a><a href="profile-student.html">Profile Murid</a><a href="profile-teacher.html">Profile Guru</a><a href="resources.html">Resources</a></nav>
+<nav class="nav-links"><a href="index.html">Home</a><a href="profile-student.html">Profile Murid</a><a href="profile-teacher.html">Profile Guru</a><a href="resources.html">Resources</a><button type="button" class="btn btn-secondary btn-small" data-logout>Keluar</button></nav>
 <div class="nav-actions"><button class="lang-toggle" data-lang-toggle>EN</button><button class="mobile-toggle">☰</button></div>
 </div></header>
 
-<main class="section-sm" data-class-page data-class-name="Kelas C">
+<main class="section-sm" data-class-page data-class-name="Kelas M">
 <div class="container">
 <div class="class-header">
-<div><span class="eyebrow">Learning Path</span><h1 id="classTitle">Kelas C</h1><p>3 modul · 30 pelajaran · tugas per pelajaran · review guru</p></div>
+<div><span class="eyebrow">Learning Path</span><h1 id="classTitle">Kelas M</h1><p>3 modul · 30 pelajaran · tugas per pelajaran · review guru</p></div>
 <div class="role-switch"><button class="active" data-role="student">Tampilan Murid</button><button data-role="teacher">Tampilan Guru</button></div>
 </div>
 
 <div class="block-card" style="margin-bottom:20px">
-<div class="progress-meta"><span>Progress Kelas C</span><strong data-progress-value>0%</strong></div>
+<div class="progress-meta"><span>Progress Kelas M</span><strong data-progress-value>0%</strong></div>
 <div class="progress-track"><div class="progress-fill" data-progress-bar style="width:0%"></div></div>
 <p class="field-help" style="margin-top:10px">Pelajaran berikutnya hanya terbuka setelah tugas sebelumnya diluluskan guru.</p>
 </div>
@@ -24,7 +24,7 @@
 <div class="class-layout">
 <aside id="moduleList"></aside>
 
-<section class="main-panel" style="padding:22px">
+<section class="main-panel">
 <div id="studentOnly">
 <div class="lesson-main"><h2 id="lessonTitle">Pelajaran 1</h2><div id="lessonBody"></div></div>
 </div>
@@ -32,7 +32,8 @@
 <h3>Panduan Guru</h3>
 <p>Gunakan bagian ini untuk mengingat kembali tujuan pembelajaran, konsep inti, contoh pengajaran, dan kesalahan umum sebelum mendampingi murid.</p>
 <ul><li>Tujuan pembelajaran</li><li>Poin penting materi</li><li>Contoh penjelasan sederhana</li><li>Catatan untuk memberi feedback</li></ul>
-<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px"><button id="demoApprove" class="btn btn-primary btn-small">Simulasikan: Luluskan</button><button id="demoRevise" class="btn btn-warning btn-small">Simulasikan: Minta Perbaikan</button></div>
+<p class="notice" id="teacherStatus" style="margin-top:12px"></p>
+<div class="row-actions" style="margin-top:12px"><button id="demoApprove" class="btn btn-primary btn-small">Simulasikan: Luluskan</button><button id="demoRevise" class="btn btn-warning btn-small">Simulasikan: Minta Perbaikan</button></div>
 </div>
 </section>
 </div>

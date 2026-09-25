@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="id">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Free Resources — RuangBelajar</title><link rel="stylesheet" href="assets/style.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Free Resources — RuangBelajar</title><meta name="theme-color" content="#2f6f66"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232f6f66'/%3E%3Ctext x='32' y='45' font-size='38' font-family='sans-serif' font-weight='800' text-anchor='middle' fill='white'%3ER%3C/text%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"><link rel="stylesheet" href="assets/style.css"></head>
 <body>
 <header class="navbar-shell"><div class="container navbar">
 <a class="brand" href="index.html"><span class="brand-mark">R</span><span>RuangBelajar<small>Learning Platform</small></span></a>
-<nav class="nav-links"><a href="index.html">Home</a><a href="resources.html">Resources</a><a href="login.html">Masuk</a><a href="register.html" class="btn btn-primary btn-small">Daftar</a></nav>
+<nav class="nav-links"><a href="index.html">Home</a><a href="resources.html">Resources</a><a href="login.html" data-auth="guest">Masuk</a><a href="register.html" class="btn btn-primary btn-small" data-auth="guest">Daftar</a><a href="profile-student.html" data-auth="member" data-profile-link hidden>Profil</a><button type="button" class="btn btn-secondary btn-small" data-auth="member" data-logout hidden>Keluar</button></nav>
 <div class="nav-actions"><button class="lang-toggle" data-lang-toggle>EN</button><button class="mobile-toggle">☰</button></div>
 </div></header>
 

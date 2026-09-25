@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>RuangBelajar — Learning Platform</title>
-<link rel="stylesheet" href="assets/style.css">
+<meta name="theme-color" content="#2f6f66"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232f6f66'/%3E%3Ctext x='32' y='45' font-size='38' font-family='sans-serif' font-weight='800' text-anchor='middle' fill='white'%3ER%3C/text%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"><link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <header class="navbar-shell">
@@ -17,8 +17,10 @@
         <a href="index.html" data-i18n="nav_home">Home</a>
         <a href="#classes" data-i18n="nav_classes">Kelas</a>
         <a href="resources.html" data-i18n="nav_resources">Resources</a>
-        <a href="login.html" data-i18n="nav_login">Masuk</a>
-        <a href="register.html" class="btn btn-primary btn-small" data-i18n="nav_register">Daftar</a>
+        <a href="login.html" data-i18n="nav_login" data-auth="guest">Masuk</a>
+        <a href="register.html" class="btn btn-primary btn-small" data-i18n="nav_register" data-auth="guest">Daftar</a>
+        <a href="profile-student.html" data-i18n="nav_profile" data-auth="member" data-profile-link hidden>Profil</a>
+        <button type="button" class="btn btn-secondary btn-small" data-i18n="nav_logout" data-auth="member" data-logout hidden>Keluar</button>
     </nav>
     <div class="nav-actions">
         <button class="lang-toggle" data-lang-toggle>EN</button>
@@ -35,24 +37,23 @@
         <h1 data-i18n="hero_title">Belajar bertumbuh, satu langkah yang berarti setiap hari.</h1>
         <p data-i18n="hero_desc">Ruang belajar yang membantu murid dan guru menjalani proses belajar secara terstruktur, manusiawi, dan terukur.</p>
         <div class="hero-actions">
-            <a href="#classes" class="btn btn-primary" data-i18n="cta_start">Mulai Perjalananmu</a>
+            <a href="#classes" id="ctaPrimary" class="btn btn-primary" data-i18n="cta_start">Mulai Perjalananmu</a>
             <a href="resources.html" class="btn btn-secondary" data-i18n="cta_free">Lihat Free Resources</a>
         </div>
     </div>
-    <div class="hero-panel">
+    <div class="hero-panel" id="heroPanel">
         <div class="hero-panel-top">
-            <strong>Progress Belajarmu</strong>
-            <span class="status-pill">● Aktif</span>
+            <strong data-i18n="panel_guest_title">Begini alur belajarnya</strong>
         </div>
-        <div class="progress-card">
-            <div class="progress-meta"><span>Kelas A</span><strong>23%</strong></div>
-            <div class="progress-track"><div class="progress-fill" style="width:23%"></div></div>
-            <p style="margin:12px 0 0;color:var(--muted);font-size:.82rem">Modul 1 · Pelajaran 7 dari 10</p>
-        </div>
+        <ol class="flow-steps">
+            <li><span class="flow-num">1</span><div><strong data-i18n="flow1_t">Pelajari materi</strong><span class="flow-desc" data-i18n="flow1_d">Video dan bacaan singkat di setiap pelajaran.</span></div></li>
+            <li><span class="flow-num">2</span><div><strong data-i18n="flow2_t">Kirim tugas</strong><span class="flow-desc" data-i18n="flow2_d">Jawab tugas di akhir pelajaran, langsung ke gurumu.</span></div></li>
+            <li><span class="flow-num">3</span><div><strong data-i18n="flow3_t">Lulus lalu lanjut</strong><span class="flow-desc" data-i18n="flow3_d">Pelajaran berikutnya terbuka setelah guru meluluskan.</span></div></li>
+        </ol>
         <div class="mini-stats">
-            <div class="mini-stat"><strong>30</strong><span>Total pelajaran</span></div>
-            <div class="mini-stat"><strong>3</strong><span>Modul</span></div>
-            <div class="mini-stat"><strong>1:1</strong><span>Pendampingan</span></div>
+            <div class="mini-stat"><strong>30</strong><span data-i18n="stat_total">Total pelajaran</span></div>
+            <div class="mini-stat"><strong>3</strong><span data-i18n="stat_modules">Modul</span></div>
+            <div class="mini-stat"><strong>1:1</strong><span data-i18n="stat_guidance">Pendampingan</span></div>
         </div>
     </div>
 </div>
@@ -70,21 +71,21 @@
     <div class="card-grid-3">
         <article class="class-card">
             <div class="class-icon">A</div>
-            <h3>Kelas A</h3>
+            <h3>Kelas G</h3>
             <p>Fondasi dasar untuk membangun pemahaman, kebiasaan belajar, dan rasa percaya diri.</p>
-            <div class="card-footer"><span class="tag">3 modul · 30 pelajaran</span><a href="class-a.html" class="btn btn-secondary btn-small">Masuk kelas</a></div>
+            <div class="card-footer"><span class="tag">3 modul · 30 pelajaran</span><a href="register.html" class="btn btn-secondary btn-small" data-member-href="class-g.html" data-i18n="class_join">Daftar untuk masuk</a></div>
         </article>
         <article class="class-card">
             <div class="class-icon">B</div>
-            <h3>Kelas B</h3>
+            <h3>Kelas H</h3>
             <p>Pembelajaran lanjutan dengan latihan yang lebih terarah dan refleksi berkala.</p>
-            <div class="card-footer"><span class="tag">3 modul · 30 pelajaran</span><a href="class-b.html" class="btn btn-secondary btn-small">Masuk kelas</a></div>
+            <div class="card-footer"><span class="tag">3 modul · 30 pelajaran</span><a href="register.html" class="btn btn-secondary btn-small" data-member-href="class-h.html" data-i18n="class_join">Daftar untuk masuk</a></div>
         </article>
         <article class="class-card">
             <div class="class-icon">C</div>
-            <h3>Kelas C</h3>
+            <h3>Kelas M</h3>
             <p>Pendalaman materi dan penerapan untuk membantu murid bergerak lebih mandiri.</p>
-            <div class="card-footer"><span class="tag">3 modul · 30 pelajaran</span><a href="class-c.html" class="btn btn-secondary btn-small">Masuk kelas</a></div>
+            <div class="card-footer"><span class="tag">3 modul · 30 pelajaran</span><a href="register.html" class="btn btn-secondary btn-small" data-member-href="class-m.html" data-i18n="class_join">Daftar untuk masuk</a></div>
         </article>
     </div>
 </div>

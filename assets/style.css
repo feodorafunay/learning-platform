@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
-
 :root{
     --bg:#f6f5f1;
     --surface:#ffffff;
@@ -29,7 +27,7 @@ html{scroll-behavior:smooth}
 
 body{
     margin:0;
-    font-family:"DM Sans",sans-serif;
+    font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
     color:var(--ink);
     background:
         radial-gradient(circle at 8% 0%, rgba(47,111,102,.07), transparent 28%),
@@ -59,6 +57,7 @@ img{max-width:100%;display:block}
     z-index:1000;
     padding:16px 0;
     background:rgba(246,245,241,.82);
+    -webkit-backdrop-filter:blur(16px);
     backdrop-filter:blur(16px);
     border-bottom:1px solid rgba(221,227,223,.75);
 }
@@ -74,7 +73,7 @@ img{max-width:100%;display:block}
     display:flex;
     align-items:center;
     gap:12px;
-    font-family:"Manrope",sans-serif;
+    font-family:"Manrope","DM Sans",system-ui,sans-serif;
     font-weight:800;
     letter-spacing:-.03em;
 }
@@ -89,7 +88,7 @@ img{max-width:100%;display:block}
 
 .brand small{
     display:block;
-    font-family:"DM Sans",sans-serif;
+    font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
     font-size:.72rem;
     font-weight:600;
     color:var(--muted);
@@ -177,7 +176,7 @@ img{max-width:100%;display:block}
 
 .hero h1,
 .page-title{
-    font-family:"Manrope",sans-serif;
+    font-family:"Manrope","DM Sans",system-ui,sans-serif;
     font-weight:800;
     letter-spacing:-.05em;
     line-height:1.05;
@@ -209,7 +208,7 @@ img{max-width:100%;display:block}
     align-items:center;
     margin-bottom:18px;
 }
-.hero-panel-top strong{font-family:"Manrope",sans-serif}
+.hero-panel-top strong{font-family:"Manrope","DM Sans",system-ui,sans-serif}
 .status-pill{
     display:inline-flex;
     align-items:center;
@@ -245,7 +244,7 @@ img{max-width:100%;display:block}
     border-radius:15px;
     padding:13px;
 }
-.mini-stat strong{display:block;font-size:1.25rem;font-family:"Manrope",sans-serif}
+.mini-stat strong{display:block;font-size:1.25rem;font-family:"Manrope","DM Sans",system-ui,sans-serif}
 .mini-stat span{font-size:.74rem;color:var(--muted)}
 
 .section-head{
@@ -253,10 +252,11 @@ img{max-width:100%;display:block}
     align-items:end;
     justify-content:space-between;
     gap:20px;
+    flex-wrap:wrap;
     margin-bottom:28px;
 }
 .section-head h2{
-    font-family:"Manrope",sans-serif;
+    font-family:"Manrope","DM Sans",system-ui,sans-serif;
     font-size:clamp(1.8rem,3vw,2.6rem);
     margin:0;
     letter-spacing:-.04em;
@@ -290,9 +290,9 @@ img{max-width:100%;display:block}
     background:#e8f1ef;
     font-weight:800;
 }
-.class-card h3{font-family:"Manrope",sans-serif;font-size:1.35rem;margin:16px 0 8px}
+.class-card h3{font-family:"Manrope","DM Sans",system-ui,sans-serif;font-size:1.35rem;margin:16px 0 8px}
 .class-card p{color:var(--muted);font-size:.92rem}
-.card-footer{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:20px}
+.card-footer{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:20px}
 .tag{
     display:inline-flex;align-items:center;
     padding:7px 10px;border-radius:999px;
@@ -320,7 +320,7 @@ img{max-width:100%;display:block}
     font-size:.72rem;text-transform:uppercase;
     letter-spacing:.08em;font-weight:800;color:var(--primary);
 }
-.resource-body h3{font-family:"Manrope",sans-serif;font-size:1.08rem;margin:7px 0}
+.resource-body h3{font-family:"Manrope","DM Sans",system-ui,sans-serif;font-size:1.08rem;margin:7px 0}
 .resource-body p{font-size:.85rem;color:var(--muted);margin:0}
 
 .page-banner{padding:56px 0 34px}
@@ -328,6 +328,7 @@ img{max-width:100%;display:block}
 
 .auth-wrap{
     min-height:calc(100vh - 76px);
+    min-height:calc(100dvh - 76px);
     display:grid;
     place-items:center;
     padding:50px 0 80px;
@@ -340,7 +341,7 @@ img{max-width:100%;display:block}
     padding:30px;
     box-shadow:var(--shadow);
 }
-.auth-card h1{font-family:"Manrope",sans-serif;margin:0 0 8px;font-size:2rem;letter-spacing:-.04em}
+.auth-card h1{font-family:"Manrope","DM Sans",system-ui,sans-serif;margin:0 0 8px;font-size:2rem;letter-spacing:-.04em}
 .auth-card > p{margin:0 0 24px;color:var(--muted)}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .form-group{display:flex;flex-direction:column;gap:8px}
@@ -374,7 +375,7 @@ input:focus,select:focus,textarea:focus{
 }
 .choice input{width:auto;min-height:auto;margin-top:3px}
 .field-help{font-size:.76rem;color:var(--muted)}
-.hidden{display:none!important}
+.hidden,[hidden]{display:none!important}
 .notice{
     padding:13px 14px;
     border-radius:13px;
@@ -429,9 +430,9 @@ input:focus,select:focus,textarea:focus{
     width:74px;height:74px;border-radius:20px;
     display:grid;place-items:center;
     background:#ddebe8;color:var(--primary);
-    font-family:"Manrope",sans-serif;font-size:1.35rem;font-weight:800;
+    font-family:"Manrope","DM Sans",system-ui,sans-serif;font-size:1.35rem;font-weight:800;
 }
-.profile-title h1{font-family:"Manrope",sans-serif;margin:0;font-size:1.7rem;letter-spacing:-.04em}
+.profile-title h1{font-family:"Manrope","DM Sans",system-ui,sans-serif;margin:0;font-size:1.7rem;letter-spacing:-.04em}
 .profile-title p{margin:4px 0 0;color:var(--muted);font-size:.88rem}
 
 .stats-row{
@@ -442,7 +443,7 @@ input:focus,select:focus,textarea:focus{
     padding:15px;border:1px solid var(--line);
     border-radius:16px;background:#fbfcfb;
 }
-.kpi strong{display:block;font-family:"Manrope",sans-serif;font-size:1.4rem}
+.kpi strong{display:block;font-family:"Manrope","DM Sans",system-ui,sans-serif;font-size:1.4rem}
 .kpi span{font-size:.74rem;color:var(--muted)}
 
 .table-wrap{overflow:auto}
@@ -456,7 +457,7 @@ input:focus,select:focus,textarea:focus{
 .progress-inline span{font-size:.78rem;color:var(--muted);width:34px;text-align:right}
 
 .section-block{margin-top:24px}
-.section-block h2{font-family:"Manrope",sans-serif;font-size:1.3rem;margin:0 0 14px}
+.section-block h2{font-family:"Manrope","DM Sans",system-ui,sans-serif;font-size:1.3rem;margin:0 0 14px}
 .block-card{
     border:1px solid var(--line);
     border-radius:18px;
@@ -465,10 +466,10 @@ input:focus,select:focus,textarea:focus{
 }
 
 .class-header{
-    display:flex;justify-content:space-between;gap:18px;align-items:flex-start;
+    display:flex;justify-content:space-between;gap:18px;align-items:flex-start;flex-wrap:wrap;
     margin-bottom:22px;
 }
-.class-header h1{font-family:"Manrope",sans-serif;font-size:2rem;margin:4px 0}
+.class-header h1{font-family:"Manrope","DM Sans",system-ui,sans-serif;font-size:2rem;margin:4px 0}
 .class-header p{color:var(--muted);margin:0}
 
 .role-switch{
@@ -496,10 +497,11 @@ input:focus,select:focus,textarea:focus{
     background:#fbfcfb;
     border-bottom:1px solid var(--line);
 }
-.module-head strong{font-family:"Manrope",sans-serif}
+.module-head strong{font-family:"Manrope","DM Sans",system-ui,sans-serif}
 .lesson-list{padding:8px}
 .lesson{
     display:flex;align-items:center;gap:10px;
+    width:100%;border:0;background:transparent;text-align:left;
     padding:10px;
     border-radius:12px;
     color:#56616a;
@@ -516,7 +518,7 @@ input:focus,select:focus,textarea:focus{
 .lesson.current .lesson-dot{background:var(--primary);color:#fff}
 .lesson.complete .lesson-dot{background:#dceee4;color:var(--success)}
 
-.lesson-main h2{font-family:"Manrope",sans-serif;font-size:1.5rem;margin:0 0 8px}
+.lesson-main h2{font-family:"Manrope","DM Sans",system-ui,sans-serif;font-size:1.5rem;margin:0 0 8px}
 .lesson-main p{color:var(--muted);margin:0 0 16px}
 .video-placeholder{
     aspect-ratio:16/9;
@@ -539,7 +541,7 @@ input:focus,select:focus,textarea:focus{
     background:#fafbf9;
     border:1px dashed #cdd8d2;
 }
-.assignment h3{font-family:"Manrope",sans-serif;font-size:1rem;margin:0 0 7px}
+.assignment h3{font-family:"Manrope","DM Sans",system-ui,sans-serif;font-size:1rem;margin:0 0 7px}
 .assignment p{font-size:.84rem}
 
 .rating-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:7px}
@@ -555,7 +557,7 @@ input:focus,select:focus,textarea:focus{
     border:1px solid #eadfc9;
     border-radius:18px;
 }
-.teacher-guide h3{margin:0 0 8px;font-family:"Manrope",sans-serif;font-size:1rem}
+.teacher-guide h3{margin:0 0 8px;font-family:"Manrope","DM Sans",system-ui,sans-serif;font-size:1rem}
 .teacher-guide p,.teacher-guide li{font-size:.84rem;color:#665941}
 
 .resource-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
@@ -582,7 +584,8 @@ input:focus,select:focus,textarea:focus{
 .chat-panel{
     position:fixed;right:24px;bottom:92px;
     width:min(380px,calc(100vw - 32px));
-    height:520px;
+    height:min(520px,calc(100vh - 116px));
+    height:min(520px,calc(100dvh - 116px));
     background:var(--surface);
     border:1px solid var(--line);
     border-radius:20px;
@@ -592,7 +595,7 @@ input:focus,select:focus,textarea:focus{
     z-index:1049;
 }
 .chat-head{padding:15px 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
-.chat-head strong{font-family:"Manrope",sans-serif}
+.chat-head strong{font-family:"Manrope","DM Sans",system-ui,sans-serif}
 .chat-body{flex:1;padding:14px;overflow:auto;background:#fbfcfb}
 .msg{max-width:82%;padding:10px 12px;border-radius:14px;margin:7px 0;font-size:.8rem}
 .msg.them{background:#edf2ef}
@@ -603,6 +606,7 @@ input:focus,select:focus,textarea:focus{
 
 .toast{
     position:fixed;left:50%;bottom:24px;
+    width:max-content;max-width:calc(100vw - 32px);text-align:center;
     transform:translate(-50%,120px);
     opacity:0;
     background:var(--ink);color:#fff;
@@ -625,6 +629,7 @@ input:focus,select:focus,textarea:focus{
 .modal{
     width:min(680px,100%);
     max-height:88vh;
+    max-height:88dvh;
     overflow:auto;
     background:var(--surface);
     border:1px solid var(--line);
@@ -633,7 +638,7 @@ input:focus,select:focus,textarea:focus{
     padding:24px;
 }
 .modal-head{display:flex;justify-content:space-between;gap:16px;align-items:start;margin-bottom:16px}
-.modal-head h2{font-family:"Manrope",sans-serif;margin:0;font-size:1.35rem}
+.modal-head h2{font-family:"Manrope","DM Sans",system-ui,sans-serif;margin:0;font-size:1.35rem}
 .close-btn{border:1px solid var(--line);background:var(--surface);width:38px;height:38px;border-radius:10px}
 
 .notice-list{display:grid;gap:10px}
@@ -653,31 +658,42 @@ input:focus,select:focus,textarea:focus{
     color:var(--muted);
     font-size:.82rem;
 }
-.footer-inner{display:flex;justify-content:space-between;gap:16px}
+.footer-inner{display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap}
 
 @media (max-width: 980px){
     .hero-grid{grid-template-columns:1fr}
     .dashboard-shell{grid-template-columns:1fr}
-    .sidebar{position:static}
     .class-layout{grid-template-columns:1fr}
+    .card-grid-3{grid-template-columns:repeat(2,1fr)}
+
+    /* sidebar dashboard -> deretan pil yang bisa digeser, bukan kartu tinggi */
+    .sidebar{
+        position:static;display:flex;gap:6px;padding:10px;border-radius:16px;
+        overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;
+    }
+    .sidebar::-webkit-scrollbar{display:none}
+    .sidebar-title{display:none}
+    .side-link{flex:0 0 auto;white-space:nowrap;padding:10px 14px}
 }
 
 @media (max-width: 760px){
     .nav-links{
         display:none;
         position:absolute;
-        top:68px;left:0;right:0;
-        padding:12px;
+        top:calc(100% + 8px);left:14px;right:14px;
+        padding:8px;gap:0;
         flex-direction:column;
         align-items:stretch;
-        background:rgba(255,255,255,.98);
+        background:#fff;
         border:1px solid var(--line);
         border-radius:16px;
         box-shadow:var(--shadow);
     }
     .nav-links.open{display:flex}
     .mobile-toggle{display:grid;place-items:center}
-    .nav-actions .btn-secondary{display:none}
+    .nav-links a:not(.btn){padding:12px;border-radius:10px}
+    .nav-links a:not(.btn):hover{background:#f0f4f2}
+    .nav-links .btn{margin-top:6px}
     .hero{padding-top:64px}
     .card-grid-3,.card-grid-2{grid-template-columns:1fr}
     .form-grid{grid-template-columns:1fr}
@@ -699,5 +715,85 @@ input:focus,select:focus,textarea:focus{
     .brand span{font-size:.9rem}
     .chat-fab{right:16px;bottom:16px}
     .chat-panel{right:16px;bottom:84px}
+    .toast{bottom:92px}
+    .main-panel{padding:18px}
+    .role-switch{display:flex;width:100%}
+    .role-switch button{flex:1}
     .rating-grid{grid-template-columns:repeat(5,1fr)}
 }
+
+/* =========================================================
+   Tambahan: responsive & UX
+   ========================================================= */
+
+/* utilitas menggantikan style="display:flex..." inline yang sulit di-override */
+.row-between{display:flex;justify-content:space-between;align-items:center;gap:12px 16px;flex-wrap:wrap}
+.row-actions{display:flex;gap:10px;flex-wrap:wrap}
+.label-text{font-size:.84rem;font-weight:700}
+.notice-icon.ok{background:#edf6f1;color:var(--success)}
+
+/* daftar pelajaran */
+.lesson-nav-body{display:grid;gap:12px}
+.lesson-nav > summary{display:none}
+
+@media (min-width: 981px){
+    /* di desktop daftar pelajaran ikut menempel & bisa di-scroll sendiri */
+    #moduleList{position:sticky;top:96px;align-self:start;max-height:calc(100vh - 116px);overflow:auto}
+}
+@media (max-width: 980px){
+    .lesson-nav{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow-soft)}
+    .lesson-nav > summary{
+        display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+        min-height:52px;padding:12px 16px;font-weight:700;cursor:pointer;list-style:none;
+    }
+    .lesson-nav > summary::-webkit-details-marker{display:none}
+    .lesson-nav > summary::after{content:"▾";margin-left:auto;transition:transform .2s}
+    .lesson-nav[open] > summary::after{transform:rotate(180deg)}
+    .lesson-nav-body{padding:0 12px 12px;max-height:60vh;overflow:auto}
+}
+
+/* tabel murid -> kartu bertumpuk di HP, supaya kolom "Jawaban" tidak tersembunyi */
+@media (max-width: 760px){
+    .table.stack{min-width:0}
+    .table.stack thead{display:none}
+    .table.stack tr{display:block;padding:10px 0;border-bottom:1px solid var(--line)}
+    .table.stack td{display:flex;justify-content:space-between;align-items:center;gap:12px;border:0;padding:6px 4px}
+    .table.stack td::before{
+        content:attr(data-label);color:var(--muted);font-size:.72rem;font-weight:700;
+        text-transform:uppercase;letter-spacing:.06em;flex:0 0 auto;
+    }
+    .table.stack .progress-inline{min-width:0;flex:1;max-width:65%}
+
+    /* beri ruang agar tombol chat tidak menutupi konten paling bawah */
+    main{padding-bottom:72px}
+}
+
+/* target sentuh minimal ~44px di layar sentuh */
+@media (pointer: coarse){
+    .btn-small,.lang-toggle,.filter-btn,.rating-btn,.role-switch button{min-height:44px}
+    .close-btn{width:44px;height:44px}
+    .mobile-toggle{width:44px;height:44px}
+}
+
+/* hormati pengaturan "kurangi animasi" */
+@media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+
+/* Panel hero di Home */
+.progress-next{margin-top:12px;color:var(--muted);font-size:.82rem}
+.progress-card .btn{margin-top:14px;width:100%}
+.flow-steps{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.flow-steps li{
+    display:flex;gap:12px;align-items:flex-start;
+    background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px;
+}
+.flow-num{
+    flex:0 0 auto;width:28px;height:28px;border-radius:50%;
+    display:grid;place-items:center;
+    background:#e8f1ef;color:var(--primary);font-weight:800;font-size:.8rem;
+}
+.flow-steps strong{display:block;font-family:"Manrope","DM Sans",system-ui,sans-serif;font-size:.95rem}
+/* sengaja <span>, bukan <p>: aturan ".hero p" akan membesarkan teksnya jadi 1.08rem */
+.flow-desc{display:block;color:var(--muted);font-size:.84rem;line-height:1.5}

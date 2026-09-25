@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="id">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Daftar — RuangBelajar</title><link rel="stylesheet" href="assets/style.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Daftar — RuangBelajar</title><meta name="theme-color" content="#2f6f66"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232f6f66'/%3E%3Ctext x='32' y='45' font-size='38' font-family='sans-serif' font-weight='800' text-anchor='middle' fill='white'%3ER%3C/text%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"><link rel="stylesheet" href="assets/style.css"></head>
 <body>
 <header class="navbar-shell"><div class="container navbar">
 <a class="brand" href="index.html"><span class="brand-mark">R</span><span>RuangBelajar<small>Learning Platform</small></span></a>
-<nav class="nav-links"><a href="index.html">Home</a><a href="resources.html">Resources</a><a href="login.html">Masuk</a></nav>
+<nav class="nav-links"><a href="index.html">Home</a><a href="resources.html">Resources</a><a href="login.html" data-auth="guest">Masuk</a><a href="profile-student.html" data-auth="member" data-profile-link hidden>Profil</a><button type="button" class="btn btn-secondary btn-small" data-auth="member" data-logout hidden>Keluar</button></nav>
 <div class="nav-actions"><button class="lang-toggle" data-lang-toggle>EN</button><button class="mobile-toggle">☰</button></div>
 </div></header>
 
@@ -16,16 +16,16 @@
 <p>Lengkapi data berikut untuk membuat akun sebagai murid atau guru.</p>
 <form id="registerForm">
 <div class="form-grid">
-<div class="form-group"><label>Nama lengkap</label><input name="name" required placeholder="Nama lengkap"></div>
-<div class="form-group"><label>Email</label><input name="email" type="email" required placeholder="nama@email.com"></div>
-<div class="form-group"><label>Nomor HP</label><input name="phone" type="tel" required placeholder="08xxxxxxxxxx"></div>
-<div class="form-group"><label>Jenis kelamin</label>
-<select name="gender" required><option value="">Pilih</option><option>Perempuan</option><option>Laki-laki</option><option>Tidak ingin menyebutkan</option></select></div>
-<div class="form-group"><label>Password</label><input name="password" type="password" required placeholder="Minimal 8 karakter"></div>
-<div class="form-group"><label>Konfirmasi password</label><input type="password" required placeholder="Ulangi password"></div>
+<div class="form-group"><label for="reg-name">Nama lengkap</label><input id="reg-name" name="name" autocomplete="name" required placeholder="Nama lengkap"></div>
+<div class="form-group"><label for="reg-email">Email</label><input id="reg-email" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="nama@email.com"></div>
+<div class="form-group"><label for="reg-phone">Nomor HP</label><input id="reg-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="08xxxxxxxxxx"></div>
+<div class="form-group"><label for="reg-gender">Jenis kelamin</label>
+<select id="reg-gender" name="gender" required><option value="">Pilih</option><option>Perempuan</option><option>Laki-laki</option><option>Tidak ingin menyebutkan</option></select></div>
+<div class="form-group"><label for="reg-pass">Password</label><input id="reg-pass" name="password" type="password" autocomplete="new-password" minlength="8" required placeholder="Minimal 8 karakter"></div>
+<div class="form-group"><label for="reg-pass2">Konfirmasi password</label><input id="reg-pass2" name="password2" type="password" autocomplete="new-password" minlength="8" required placeholder="Ulangi password"></div>
 
 <div class="form-group full">
-<label>Daftar sebagai</label>
+<div class="label-text">Daftar sebagai</div>
 <div class="choice-row">
 <label class="choice"><input type="radio" name="role" value="student" checked><span><strong>Murid</strong><br><small class="field-help">Mendaftar dengan kode referral dari guru.</small></span></label>
 <label class="choice"><input type="radio" name="role" value="teacher"><span><strong>Guru</strong><br><small class="field-help">Mendapatkan kode referral unik untuk dibagikan ke calon murid.</small></span></label>
@@ -33,13 +33,13 @@
 </div>
 
 <div class="form-group full" id="studentReferralField">
-<label>Kode referral guru</label>
-<input name="referral" placeholder="Contoh: KLM582">
+<label for="reg-ref">Kode referral guru</label>
+<input id="reg-ref" name="referral" autocomplete="off" autocapitalize="characters" placeholder="Contoh: KLM582">
 <span class="field-help">Field ini hanya diperlukan untuk murid.</span>
 </div>
 
 <div class="form-group full hidden" id="teacherReferralField">
-<label>Kode referral kamu</label>
+<label for="teacherGeneratedCode">Kode referral kamu</label>
 <input id="teacherGeneratedCode" name="teacher_code" readonly>
 <span class="field-help">Prototype ini membuat format 3 huruf + 3 angka. Pada versi produksi, kode harus dibuat dan diverifikasi server agar benar-benar unik.</span>
 </div>

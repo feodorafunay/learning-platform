@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="id">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Profile Guru — RuangBelajar</title><link rel="stylesheet" href="assets/style.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Profile Guru — RuangBelajar</title><meta name="theme-color" content="#2f6f66"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232f6f66'/%3E%3Ctext x='32' y='45' font-size='38' font-family='sans-serif' font-weight='800' text-anchor='middle' fill='white'%3ER%3C/text%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"><link rel="stylesheet" href="assets/style.css"></head>
 <body>
 <header class="navbar-shell"><div class="container navbar">
 <a class="brand" href="index.html"><span class="brand-mark">R</span><span>RuangBelajar<small>Learning Platform</small></span></a>
-<nav class="nav-links"><a href="index.html">Home</a><a href="class-a.html">Kelas A</a><a href="class-b.html">Kelas B</a><a href="class-c.html">Kelas C</a><a href="resources.html">Resources</a></nav>
+<nav class="nav-links"><a href="index.html">Home</a><a href="class-g.html">Kelas G</a><a href="class-h.html">Kelas H</a><a href="class-m.html">Kelas M</a><a href="resources.html">Resources</a><button type="button" class="btn btn-secondary btn-small" data-logout>Keluar</button></nav>
 <div class="nav-actions"><button class="lang-toggle" data-lang-toggle>EN</button><button class="mobile-toggle">☰</button></div>
 </div></header>
 
 <main class="section-sm"><div class="container dashboard-shell">
-<aside class="sidebar"><div class="sidebar-title">Menu Guru</div><a class="side-link active" href="profile-teacher.html">Profile</a><a class="side-link" href="class-a.html">Kelas A</a><a class="side-link" href="class-b.html">Kelas B</a><a class="side-link" href="class-c.html">Kelas C</a><a class="side-link" href="resources.html">Resources</a></aside>
+<aside class="sidebar"><div class="sidebar-title">Menu Guru</div><a class="side-link active" href="profile-teacher.html">Profile</a><a class="side-link" href="class-a.html">Kelas G</a><a class="side-link" href="class-b.html">Kelas H</a><a class="side-link" href="class-c.html">Kelas M</a><a class="side-link" href="resources.html">Resources</a></aside>
 <section class="main-panel">
 <div class="profile-header">
 <div class="avatar">MA</div>
@@ -26,20 +26,20 @@
 
 <div class="section-block">
 <h2>Kode referral</h2>
-<div class="block-card" style="display:flex;justify-content:space-between;gap:18px;align-items:center">
+<div class="block-card row-between">
 <div><div class="field-help">Bagikan kode ini ke calon murid</div><strong style="font-size:1.7rem;letter-spacing:.08em" data-referral-code>KLM582</strong></div>
-<button class="btn btn-secondary btn-small" onclick="navigator.clipboard?.writeText(document.querySelector('[data-referral-code]').textContent); toast('Kode referral disalin.')">Salin kode</button>
+<button class="btn btn-secondary btn-small" onclick="copyReferral()">Salin kode</button>
 </div>
 </div>
 
 <div class="section-block">
 <h2>Daftar murid</h2>
 <div class="table-wrap">
-<table class="table"><thead><tr><th>Murid</th><th>Kelas</th><th>Progress</th><th>Status</th><th>Jawaban</th></tr></thead>
+<table class="table stack"><thead><tr><th>Murid</th><th>Kelas</th><th>Progress</th><th>Status</th><th>Jawaban</th></tr></thead>
 <tbody>
-<tr><td><strong>Felicia S.</strong></td><td>Kelas A</td><td><div class="progress-inline"><div class="progress-track"><div class="progress-fill" style="width:23%"></div></div><span>23%</span></div></td><td><span class="tag">Aktif</span></td><td><button class="btn btn-warning btn-small" onclick="openReview('Felicia S.')">1 jawaban baru</button></td></tr>
-<tr><td><strong>Andi P.</strong></td><td>Kelas B</td><td><div class="progress-inline"><div class="progress-track"><div class="progress-fill" style="width:47%"></div></div><span>47%</span></div></td><td><span class="tag">Aktif</span></td><td><button class="btn btn-secondary btn-small" onclick="openReview('Andi P.')">Lihat</button></td></tr>
-<tr><td><strong>Nadia R.</strong></td><td>Kelas C</td><td><div class="progress-inline"><div class="progress-track"><div class="progress-fill" style="width:71%"></div></div><span>71%</span></div></td><td><span class="tag">Aktif</span></td><td><button class="btn btn-secondary btn-small" onclick="openReview('Nadia R.')">Lihat</button></td></tr>
+<tr><td data-label="Murid"><strong>Felicia S.</strong></td><td data-label="Kelas">Kelas G</td><td data-label="Progress"><div class="progress-inline"><div class="progress-track"><div class="progress-fill" style="width:23%"></div></div><span>23%</span></div></td><td data-label="Status"><span class="tag">Aktif</span></td><td data-label="Jawaban"><button class="btn btn-warning btn-small" onclick="openReview('Felicia S.')">1 jawaban baru</button></td></tr>
+<tr><td data-label="Murid"><strong>Andi P.</strong></td><td data-label="Kelas">Kelas H</td><td data-label="Progress"><div class="progress-inline"><div class="progress-track"><div class="progress-fill" style="width:47%"></div></div><span>47%</span></div></td><td data-label="Status"><span class="tag">Aktif</span></td><td data-label="Jawaban"><button class="btn btn-secondary btn-small" onclick="openReview('Andi P.')">Lihat</button></td></tr>
+<tr><td data-label="Murid"><strong>Nadia R.</strong></td><td data-label="Kelas">Kelas M</td><td data-label="Progress"><div class="progress-inline"><div class="progress-track"><div class="progress-fill" style="width:71%"></div></div><span>71%</span></div></td><td data-label="Status"><span class="tag">Aktif</span></td><td data-label="Jawaban"><button class="btn btn-secondary btn-small" onclick="openReview('Nadia R.')">Lihat</button></td></tr>
 </tbody></table>
 </div>
 </div>
@@ -72,16 +72,5 @@
 <div class="chat-panel hidden"><div class="chat-head"><strong>Chat dengan murid</strong><button class="close-btn chat-close">×</button></div><div class="chat-body"></div><form class="chat-input" id="chatForm"><input placeholder="Pilih murid atau tulis pesan..."><button>➤</button></form></div>
 
 <script src="assets/app.js"></script>
-<script>
-function openReview(name){
-    document.getElementById("reviewTitle").textContent="Review jawaban — "+name;
-    document.getElementById("reviewModal").classList.add("open");
-}
-function closeReview(){document.getElementById("reviewModal").classList.remove("open")}
-function reviewAction(action){
-    closeReview();
-    toast(action==="pass"?"Murid berhasil diluluskan. Progress akan diperbarui.":"Murid diminta memperbaiki jawaban.");
-}
-</script>
 </body>
 </html>

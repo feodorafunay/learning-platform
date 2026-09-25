@@ -1,31 +1,31 @@
 <!doctype html>
 <html lang="id">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Profile Murid — RuangBelajar</title><link rel="stylesheet" href="assets/style.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Profile Murid — RuangBelajar</title><meta name="theme-color" content="#2f6f66"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232f6f66'/%3E%3Ctext x='32' y='45' font-size='38' font-family='sans-serif' font-weight='800' text-anchor='middle' fill='white'%3ER%3C/text%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"><link rel="stylesheet" href="assets/style.css"></head>
 <body>
 <header class="navbar-shell"><div class="container navbar">
 <a class="brand" href="index.html"><span class="brand-mark">R</span><span>RuangBelajar<small>Learning Platform</small></span></a>
-<nav class="nav-links"><a href="index.html">Home</a><a href="class-a.html">Kelas A</a><a href="class-b.html">Kelas B</a><a href="class-c.html">Kelas C</a><a href="resources.html">Resources</a></nav>
+<nav class="nav-links"><a href="index.html">Home</a><a href="class-a.html">Kelas G</a><a href="class-b.html">Kelas H</a><a href="class-c.html">Kelas M</a><a href="resources.html">Resources</a><button type="button" class="btn btn-secondary btn-small" data-logout>Keluar</button></nav>
 <div class="nav-actions"><button class="lang-toggle" data-lang-toggle>EN</button><button class="mobile-toggle">☰</button></div>
 </div></header>
 
 <main class="section-sm"><div class="container dashboard-shell">
-<aside class="sidebar"><div class="sidebar-title">Menu Murid</div><a class="side-link active" href="profile-student.html">Profile</a><a class="side-link" href="class-a.html">Kelas A <span>23%</span></a><a class="side-link" href="class-b.html">Kelas B <span>0%</span></a><a class="side-link" href="class-c.html">Kelas C <span>0%</span></a><a class="side-link" href="resources.html">Resources</a></aside>
+<aside class="sidebar"><div class="sidebar-title">Menu Murid</div><a class="side-link active" href="profile-student.html">Profile</a><a class="side-link" href="class-a.html">Kelas G <span data-progress-value="kelas-a">23%</span></a><a class="side-link" href="class-b.html">Kelas H <span data-progress-value="kelas-b">0%</span></a><a class="side-link" href="class-c.html">Kelas M <span data-progress-value="kelas-c">0%</span></a><a class="side-link" href="resources.html">Resources</a></aside>
 <section class="main-panel">
 <div class="profile-header">
 <div class="avatar">FS</div>
-<div class="profile-title"><h1>Felicia S.</h1><p>Murid · Kelas A · Guru: Maria</p></div>
+<div class="profile-title"><h1>Felicia S.</h1><p>Murid · Kelas G · Guru: Maria</p></div>
 <div class="header-actions"><span class="status-pill">Belajar aktif</span></div>
 </div>
 
 <div class="stats-row">
 <div class="kpi"><strong data-progress-value>0%</strong><span>Progress kelas</span></div>
 <div class="kpi"><strong>1</strong><span>Guru</span></div>
-<div class="kpi"><strong>7/30</strong><span>Pelajaran</span></div>
+<div class="kpi"><strong data-lessons-done="kelas-a">7/30</strong><span>Pelajaran</span></div>
 <div class="kpi"><strong>4</strong><span>Review selesai</span></div>
 </div>
 
 <div class="block-card">
-<div class="progress-meta"><span>Progress Belajar Kelas A</span><strong data-progress-value>0%</strong></div>
+<div class="progress-meta"><span>Progress Belajar Kelas G</span><strong data-progress-value>0%</strong></div>
 <div class="progress-track"><div class="progress-fill" data-progress-bar style="width:0%"></div></div>
 <p class="field-help" style="margin-top:10px">Progress berubah setelah jawaban diluluskan guru.</p>
 </div>
@@ -33,15 +33,15 @@
 <div class="section-block">
 <h2>Notifikasi</h2>
 <div class="notice-list">
-<div class="notice-item unread"><div style="display:flex;gap:10px;align-items:center"><div class="notice-icon">!</div><div><strong>Guru memberikan hasil review</strong><div class="field-help">Pelajaran 6 · Jawaban perlu diperbaiki.</div></div></div><button class="btn btn-secondary btn-small">Lihat</button></div>
-<div class="notice-item"><div><div><strong>Pelajaran 7 terbuka</strong><div class="field-help">Kamu bisa melanjutkan setelah pelajaran sebelumnya lulus.</div></div></div><button class="btn btn-secondary btn-small" onclick="location.href='class-a.html'">Mulai</button></div>
+<div class="notice-item unread"><div style="display:flex;gap:10px;align-items:center"><div class="notice-icon ok">✓</div><div><strong>Guru memberikan hasil review</strong><div class="field-help">Pelajaran 7 · Dinyatakan lulus.</div></div></div><button class="btn btn-secondary btn-small">Lihat</button></div>
+<div class="notice-item"><div><div><strong>Pelajaran 8 terbuka</strong><div class="field-help">Pelajaran sebelumnya sudah lulus, kamu bisa melanjutkan.</div></div></div><button class="btn btn-secondary btn-small" onclick="location.href='class-a.html'">Mulai</button></div>
 </div>
 </div>
 
 <div class="section-block">
 <h2>Guru kamu</h2>
-<div class="block-card" style="display:flex;justify-content:space-between;gap:16px;align-items:center">
-<div><strong>Maria Ananda</strong><div class="field-help">Guru Kelas A</div></div>
+<div class="block-card row-between">
+<div><strong>Maria Ananda</strong><div class="field-help">Guru Kelas G</div></div>
 <button class="btn btn-primary btn-small" onclick="document.querySelector('.chat-fab').click()">Chat guru</button>
 </div>
 </div>
