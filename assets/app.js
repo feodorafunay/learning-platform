@@ -267,7 +267,7 @@
        });
    }
    
-   const classPage = key => `class-${key.split("-")[1]}.html`;          // "kelas-g" -> "class-a.html"
+   const classPage = key => `class-${key.split("-")[1]}.html`;          // "kelas-g" -> "class-g.html"
    const className = key => `Kelas ${key.split("-")[1].toUpperCase()}`;  // "kelas-g" -> "Kelas G"
    
    // kelas yang paling maju = kelas Gktif murid (seri -> Kelas G)
